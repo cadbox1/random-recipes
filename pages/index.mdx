@@ -4,9 +4,9 @@ import { App } from "../components/App"
 
 <Head />
 
-# Cadell's NextJS Template
+# Random Recipes
 
-Powered by NextJS, MDX, vanilla-extract and cadells-vanilla-components.
+Get a random combination of ingredients for an inspirational recipe.
 
 <GitHub />
 
@@ -16,39 +16,48 @@ Powered by NextJS, MDX, vanilla-extract and cadells-vanilla-components.
 
 ## Background
 
-I had an idea for a new app called Random Recipes and worked out I could do the first version on the frontend, easy! I've built a few NextJS apps now and I'm getting pretty good at it, I even created some reusable components, cadells-vanilla-components, as part of my last project, random-emojis.
+I recently tried HelloFresh and it was really fun! I decided not to continue with my subscription because I didn't get enough value out of it but I found the weekly recipes really fun and inspiring. Prior to this, I mostly cooked practical meals - meals that were healthy, easy, tasty and had leftovers but HelloFresh showed me that cooking random recipes can be really fun.
 
-All I have to do is rip out the frontend from random-emojis, strip it back and I'm ready to start developing random-recipes. But what about the next project? It would be great to have a template all ready to go with all my favourite things in it.
+I've decided to cook my practical meals going forward but also cook some fun meals as well.
+
+I looked for inspiration on websites like taste.com.au as well as some I found on HackerNews but then I realised I don't really need a full recipe, I just need some combination of ingredients to use as a guide.
+
+I realised I already kind of cook like this. Every week I cook about 1kg of chicken breast on the barbecue then put it in burgers, wraps or with rice and frozen veggies with a random sauce. So far I'm pretty satisfied with the variety I'm getting.
+
+The more I thought about it, the more interesting the problem space became. There's constraints on the combinations of ingredients you can have e.g you don't usually have baby spinach in bologense but you might have any combination of vegetables with it in a salad. Tasty!
 
 ## User Story
 
-As Cadell, I want a NextJS template with all my favourite things in it so I can build apps faster in the future.
+As Cadell, I want to get a random combination of ingredients to form an inspirational recipe. 
+
+As Cadell, I want to re-roll any or all of the ingredients, similar to a slot machine, to find an inspirational recipe.
 
 ## Solution
 
-A basic NextJS app setup with MDX, vanilla-extract, cadells-vanilla-components and an emoji favicon.
+What data structure would support these requirements? Maybe this would be a good excuse to try a graph database?
 
-It should also have some basic headings in the index.mdx to explain my new projects.
+Calm down, let's just build a frontend app to start with then go from there.
 
-I think I'll deploy it to Netlify too.
+How should we store the 'rules' for which ingredients go in which meal? I think let's keep it simple and manual for now. I'll specify which ingredients can go in a bologense and which can go in a salad. This can then be updated with PRs which might be fun.
+
+I've created a few NextJS apps already so I think I'll create a NextJS template and use it for this project as well.
 
 ## Implementation
 
 ### Challenges
 
-- I didn't realise Netlify now uses a NextJS plugin so there's no need to update the build command and output directory.
+- 
 
 ### Notes
 
-Netlify has a NextJS plugin now so you should keep the default build command and publish directory:
 
-- Build command: yarn build
-- Publish directory: .next
-
-This project took about 1 hour.
 
 ### Milestones
 
-- done - NextJS app
-- done - Project headings
-- done - Deployment
+- store ingredents in a data structure
+- get a random list of ingredients
+- deploy the project
+- store the app state in a URL so it can be shared
+- implement a hold behaviour
+- search google for recipes that use the ingredients
+- ability increase the number of ingredients

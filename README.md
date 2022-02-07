@@ -1,8 +1,8 @@
-# Cadell's NextJS Template
+# Random Recipes
 
-Powered by NextJS, MDX, vanilla-extract and cadells-vanilla-components.
+Get a random combination of ingredients for an inspirational recipe.
 
-https://template.cadell.dev/
+https://recipes.cadell.dev/
 
 ## Commands
 
