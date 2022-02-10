@@ -879,9 +879,9 @@ bytes@3.1.0:
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
 
 cadells-vanilla-components@^0.3.0:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/cadells-vanilla-components/-/cadells-vanilla-components-0.3.8.tgz#236a75aa30191fbc01b6c61a01901cd0ce72eb12"
-  integrity sha512-goMF7JPGXi1P6oyfvJoXTde9UOj+UrBKqKwNbHU/7KsiNcK6DLMXG8fN4le0TjKJok08cQ4k0l5P2FLbqO2pTw==
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/cadells-vanilla-components/-/cadells-vanilla-components-0.3.9.tgz#99f5da2136ea19f1a453f87cdb77fee46bc890ad"
+  integrity sha512-veqdPdqe/4+bT5O5ctJktK1Lt+z02/hUr3CSGK2vJJQiR3jTHNJ4rH/qzsJPOW+8+Eyt1L890Mp0MM40rYJhuA==
   dependencies:
     slugify "^1.6.5"
 

@@ -6,7 +6,7 @@ import "@fontsource/source-sans-pro/600.css";
 const App = ({ Component, pageProps }) => (
 	<MdxProvider>
 		<Container>
-			<Header />
+			<Header githubHref="https://github.com/cadbox1/random-emojis" />
 			<Component {...pageProps} />
 		</Container>
 	</MdxProvider>
