@@ -4,7 +4,7 @@
   "dependencies": {
     "@fontsource/source-sans-pro": "^4.5.1",
     "cadells-vanilla-components": "^0.3.0",
-    "next": "latest",
+    "next": "^12.0.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "serve": "11.2.0"
