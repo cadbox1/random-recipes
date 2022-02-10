@@ -1,6 +1,7 @@
-import { P } from "cadells-vanilla-components";
-import { useState } from "react";
+import { Button, P } from "cadells-vanilla-components";
+import { useEffect, useState } from "react";
 import { combinations } from "./combinations";
+import { appClass } from "./styles.css";
 
 export function App() {
 	const [recipeType, setRecipeType] = useState("");
@@ -20,7 +21,7 @@ export function App() {
 		}
 	};
 
-	const handleRollClick = () => {
+	const roll = () => {
 		const recipeType = getRecipeType();
 		const combination = combinations[recipeType];
 		setRecipeType(recipeType);
@@ -42,6 +43,14 @@ export function App() {
 			const option = options[Math.floor(options.length * Math.random())];
 			setOption(option);
 		}
+	}
+
+	useEffect(() => {
+		roll()
+	}, [])
+
+	const handleRollClick = () => {
+		roll();
 	};
 
 	const handleHold = holdType => evt => {
@@ -54,12 +63,11 @@ export function App() {
 	};
 
 	return (
-		<div>
+		<div className={appClass}>
 			<P>
-				<button onClick={handleRollClick}>Roll</button>
+				{/* @ts-ignore */}
+				<Button onClick={handleRollClick}>Roll</Button>
 			</P>
-			<P>Check the checkbox to hold that ingredient.</P>
-
 			<P>
 				<input
 					type="checkbox"
@@ -92,6 +100,8 @@ export function App() {
 				/>
 				Option: {option}
 			</P>
+			
+			<P>Check the checkbox to hold that ingredient.</P>
 		</div>
 	);
 }
